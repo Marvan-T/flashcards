@@ -5,7 +5,7 @@ This is a simple flashcard application. You can add/remove flashcards. Knowledge
 
 * add - adds a flashcard to the program 
 * remove - remove a flashcard that you already added 
-* import - import a saved flashcard file from this program 
+* import - import a saved flashcard file to this program 
 * export - export the flashcards that you have created to a file  
 * ask - tests your knowledge on the flashcards you created  
 * hardest card - displays the card that you make most mistakes on
