@@ -18,6 +18,7 @@ public class Main {
             for (int i = 0; i < args.length; i++) {
                 if (args[i].contains("-import")) {
                     importCards(flashCards, flashCardDifficulty, args[i + 1], logs);
+                    break;
                 }
             }
         }
