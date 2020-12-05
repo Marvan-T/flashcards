@@ -41,6 +41,13 @@ public class Main {
                     break;
 
                 case "import":
+                    if (args.length > 0) {
+                        importCards(flashCards, flashCardDifficulty, args[0], logs);
+                    } else {
+                        System.out.println("File name:");
+                        logs.add("File name:");
+                        importCards(flashCards, flashCardDifficulty, scanner.nextLine(), logs);
+                    }
                     break;
 
                 case "export":
@@ -230,6 +237,8 @@ public class Main {
             } else if (flashCards.containsValue(userAnswer)) {
                 flashCards.forEach((aTerm, aDefinition) -> {
                     if (Objects.equals(userAnswer, aDefinition)) {
+                        System.out.println("Wrong answer. The correct one is "  + "\"" + flashCards.get(randomTerm) + "\", you've just written the definition of " + "\"" + aTerm + "\"");
+                        log.add("Wrong answer. The correct one is "  + "\"" + flashCards.get(randomTerm) + "\", you've just written the definition of " + "\"" + aTerm + "\"");
                         int currentMistakes = flashCardsDifficulty.get(randomTerm);
                         flashCardsDifficulty.put(randomTerm, currentMistakes + 1); //increasing the no.of mistakes
                     }
