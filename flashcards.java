@@ -1,4 +1,3 @@
-
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -42,10 +41,6 @@ public class Main {
                     break;
 
                 case "import":
-                    importCards(flashCards, flashCardDifficulty, args[1], logs);
-                    System.out.println("File name:");
-                    logs.add("File name:");
-                    importCards(flashCards, flashCardDifficulty, scanner.nextLine(), logs);
                     break;
 
                 case "export":
@@ -235,8 +230,6 @@ public class Main {
             } else if (flashCards.containsValue(userAnswer)) {
                 flashCards.forEach((aTerm, aDefinition) -> {
                     if (Objects.equals(userAnswer, aDefinition)) {
-                        System.out.println("Wrong answer. The correct one is "  + "\"" + flashCards.get(randomTerm) + "\", you've just written the definition of " + "\"" + aTerm + "\" (ignoring case)");
-                        log.add("Wrong answer. The correct one is "  + "\"" + flashCards.get(randomTerm) + "\", you've just written the definition of " + "\"" + aTerm + "\" (ignoring case)");
                         int currentMistakes = flashCardsDifficulty.get(randomTerm);
                         flashCardsDifficulty.put(randomTerm, currentMistakes + 1); //increasing the no.of mistakes
                     }
