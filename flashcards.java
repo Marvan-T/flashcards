@@ -43,7 +43,6 @@ public class Main {
 
                 case "import":
                     importCards(flashCards, flashCardDifficulty, args[0], logs);
-                    System.out.println("File name:");
                     logs.add("File name:");
                     importCards(flashCards, flashCardDifficulty, scanner.nextLine(), logs);
                     break;
